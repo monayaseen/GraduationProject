@@ -66,6 +66,8 @@ public class LogIn extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
 
 
+
+
                 //authenticate the user : check if it is already in firebase or not:
 
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
