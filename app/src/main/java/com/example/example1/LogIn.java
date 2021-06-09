@@ -68,6 +68,10 @@ public class LogIn extends AppCompatActivity {
 
 
 
+
+
+
+
                 //authenticate the user : check if it is already in firebase or not:
 
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
