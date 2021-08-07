@@ -1,163 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    tools:context=".Actitvity.MainActivity"
+    tools:ignore="HardcodedText">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg33"
+
     android:backgroundTintMode="screen"
-    tools:context=".MainActivity">
+    tools:context=".Actitvity.MainActivity"
+    >
 
     <LinearLayout
-        android:id="@+id/categories"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="420dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="649dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/electricity" />
 
-        <ImageButton
-            android:id="@+id/accessoriesbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/necklace" />
 
-        <ImageButton
-            android:id="@+id/clothesbutton"
+        <RadioGroup
+            android:id="@+id/sort"
             android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/shirts" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="70dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Sort by price" />
+            <RadioButton
+                android:id="@+id/Asc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lowest"
+                android:textColor="@color/black"
+                />
 
-        <ImageButton
-            android:id="@+id/homebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/home" />
+            <RadioButton
+                android:id="@+id/Decs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Highest  "
+                android:textColor="@color/black"
+                />
 
-        <ImageButton
-            android:id="@+id/eventbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/flags" />
+        </RadioGroup>
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/openfragment"
-        android:layout_width="51dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="4dp"
-        android:background="@color/material_on_background_disabled"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vertical_dots" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="410dp"
-        android:layout_height="355dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
 
-    <ImageButton
-        android:id="@+id/addtocart"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/material_on_background_disabled"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toEndOf="@+id/viewcart"
-        app:srcCompat="@drawable/addtocart" />
-
-    <ImageButton
-        android:id="@+id/viewcart"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/material_on_background_disabled"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/viewcart" />
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="300dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_gravity="end"
         android:layout_marginEnd="16dp"
-        android:gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/sortmethod"
-        android:layout_width="70dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:background="@color/material_on_background_disabled"
-        android:padding="5dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
-
-    <Button
-        android:id="@+id/SignOut"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="4dp"
-        android:onClick="signout"
-        android:text="SignOut"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="OnClick" />
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/mNavigationView"
+        app:menu="@menu/navigation_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

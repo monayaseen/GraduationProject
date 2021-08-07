@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <group
+        android:id="@+id/group"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/Categories"
+            android:title="Categories">
+            <menu>
+
+                <item
+                    android:id="@+id/AllItems"
+                    android:title="All"
+                    />
+
+                <item
+                    android:id="@+id/Clothes_And_Fashion"
+                    android:title="Clothes And Fashion"
+                    />
+                <item
+                    android:id="@+id/Jewelry_and_Watches"
+                    android:title="Jewelry And Watches" />
+                <item
+                    android:id="@+id/accessories"
+
+                    android:title="Accessories" />
+
+                <item
+                    android:id="@+id/Home"
+                    android:title="Home, Pets and Appliances" />
+                <item
+                    android:id="@+id/Others"
+                    android:title="Others" />
+            </menu>
+        </item>
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/location"
+            android:title="Items">
+
+
+            <menu>
+                <item
+                    android:id="@+id/ItemsAtMyLocation"
+                    android:title="Items in my location"
+                    android:layout_gravity="bottom"/>
+                <item
+                    android:id="@+id/CartItems"
+                    android:title="MY Cart  "
+                    android:layout_gravity="bottom"
+                    tools:ignore="DuplicateIds" />
+                <item
+                    android:id="@+id/reportitems"
+                    android:title="My Report "
+                    android:layout_gravity="bottom"
+                    tools:ignore="DuplicateIds" />
+            </menu>
+        </item>
+
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/uuuu"
+            android:title="Your Settings">
+            <menu>
+                <item
+                    android:id="@+id/EditProfile"
+                    android:title="Edit Profile"
+                    android:layout_gravity="bottom"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:layout_gravity="bottom"/>
+            </menu>
+        </item>
+    </group>
+
+
+
+
+
+
+    </menu>

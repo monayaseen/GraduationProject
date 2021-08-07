@@ -1,6 +1,36 @@
 <resources>
-    <string name="app_name">example1</string>
+    <string name="app_name">Graduation Project</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rent_whatever_you_want">Rent Whatever You Want</string>
+    <string name="jeyb">Jeyb</string>
+
+    <!--to toggle the open close button
+        of the navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="error_occurred_please_try_again">Error occurred, please try again</string>
+    <string name="product_name">Product Name</string>
+    <string name="_30ils">30ILS</string>
+    <string name="ok">Ok</string>
+    <string name="description">Description</string>
+    <string name="Item_name">Item name</string>
+    <string name="price">Price</string>
+    <string name="submit_rate">Submit Rate</string>
+    <string name="enter_your_account_information_please">Enter Your Account Information, Please</string>
+    <string name="your_card_number">Your Card Number</string>
+    <string name="your_card_password">Your Card Password</string>
+    <string name="confirm_payment">Confirm Payment</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_description">Item description</string>
+
+    <string name="add">Add</string>
+    <string name="address">Address</string>
+    <string name="password_confirmation">Password confirmation</string>
+    <string name="new_password">New Password</string>
+    <string name="new_phone">New Phone</string>
+    <string name="new_e_mail">New E-mail</string>
+    <string name="change_your_name">Change your name!</string>
 
 </resources>

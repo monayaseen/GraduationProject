@@ -4,26 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg44"
+    android:background="@drawable/bg1"
     tools:context=".Pay">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/paypal"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_default"
+        android:text="PayPal"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <Button
+        android:id="@+id/visacard"
         android:layout_width="170dp"
         android:layout_height="80dp"
         android:layout_marginBottom="84dp"
-        android:text="PayPal"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="170dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="124dp"
+        android:background="@drawable/button_default"
         android:text="Visa Card"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,12 +35,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="397dp"
+        android:layout_width="match_parent"
         android:layout_height="138dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="35dp"
         android:text="Choose a payment method to complete"
-        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

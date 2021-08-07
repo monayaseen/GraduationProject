@@ -4,102 +4,124 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg44"
-    tools:context=".EditProfile">
-
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Type your password to allow update!!"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newpassword" />
-
-    <EditText
-        android:id="@+id/newpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="New Password"
-        android:inputType="textPassword"
-        android:gravity="center"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newphone" />
+    android:background="@drawable/main"
+    tools:context=".Actitvity.EditProfile">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Update Your Info"
         android:textAlignment="center"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/newname"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="50dp"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/change_your_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/newmail"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="32dp"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/new_e_mail"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newname" />
+
 
     <EditText
         android:id="@+id/newphone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="20sp"
+        android:background="@layout/rounded_border_edittext"
         android:ems="10"
-        android:hint="New Phone #"
-        android:inputType="phone"
         android:gravity="center"
+        android:hint="@string/new_phone"
+        android:inputType="phone"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newmail" />
 
     <EditText
-        android:id="@+id/newmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/newpassword"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
         android:layout_marginTop="32dp"
+        android:background="@layout/rounded_border_edittext"
         android:ems="10"
-        android:hint="New E-mail"
-        android:inputType="textEmailAddress"
         android:gravity="center"
+        android:hint="@string/new_password"
+        android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newname" />
+        app:layout_constraintTop_toBottomOf="@+id/newphone" />
 
     <EditText
-        android:id="@+id/newname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:layout_marginTop="32dp"
+        android:background="@layout/rounded_border_edittext"
         android:ems="10"
-        android:hint="Change yur name!"
-        android:inputType="textPersonName"
         android:gravity="center"
+        android:hint="@string/password_confirmation"
+        android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/newpassword" />
+
+    <Spinner
+        android:id="@+id/job_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:background="@layout/rounded_border_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="415dp" />
+
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="164dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

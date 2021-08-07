@@ -3,6 +3,8 @@
     package="com.example.example1">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,26 +12,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Example1">
-        <activity android:name=".EditProfile"></activity>
-        <activity android:name=".Cart" />
+        android:theme="@style/Theme.Example1"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ItemsExpired"></activity>
+        <activity android:name=".Notification" />
+        <activity android:name=".Actitvity.AddNewItem" />
+        <activity android:name=".Actitvity.EditProfile" />
+        <activity android:name=".Actitvity.Cart" />
         <activity android:name=".Pay" />
-        <activity android:name=".ViewItem" />
-        <activity android:name=".Start">
+        <activity android:name=".Actitvity.ViewItem" />
+        <activity android:name=".Actitvity.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogIn">
+        <activity android:name=".Actitvity.LogIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp">
+        <activity android:name=".Actitvity.report">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Actitvity.SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,13 +56,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Actitvity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".FirebaseMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class RenterOut extends AppCompatActivity {
+    private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +15,7 @@ public class RenterOut extends AppCompatActivity {
         setContentView(R.layout.activity_renter_out);
 
         Spinner dropdown = findViewById(R.id.item_category);
-        String[] items = new String[]{"Home", "Clothes", "Electrical devices", "Accessories","Events"};
+        String[] items = new String[]{"Home", "Clothes", "Electrical devices", "Accessories", "Events"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
 

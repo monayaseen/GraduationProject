@@ -1,24 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:background="@drawable/bg22"
     tools:ignore="ExtraText">
 
 
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginBottom="130sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:id="@+id/secondPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inknut_antiqua_light"
+        android:text="@string/jeyb"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textDirection="firstStrongRtl"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
     <TextView
         android:id="@+id/describe"
-        android:layout_width="345dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Rent Whatever You Want"
+        android:text="@string/rent_whatever_you_want"
         android:textAlignment="center"
-        android:textColor="#434141"
+        android:textColor="@color/white"
         android:textColorLink="#F164AD"
-        android:textSize="24sp"
+        android:textSize="16sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.029"
@@ -26,46 +51,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.587" />
 
-    <TextView
-        android:id="@+id/secondPage"
-        android:layout_width="409dp"
-        android:layout_height="234dp"
-        android:fontFamily="@font/inknut_antiqua_light"
-        android:text="Jeyb"
-        android:textAlignment="center"
-        android:textColor="#6A0909"
-        android:textDirection="firstStrongRtl"
-        android:textSize="120sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_marginTop="20sp"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#D16F67"
-        android:fontFamily="@font/inknut_antiqua_light"
-        android:text="Start"
-        app:cornerRadius="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86" />
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/describe"-->
-    <!--        android:layout_width="201dp"-->
-    <!--        android:layout_height="38dp"-->
-    <!--        android:text="Rent Whatever you want"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="1.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/firstPage"-->
-    <!--        app:layout_constraintVertical_bias="0.0" />-->
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
